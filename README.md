@@ -8,7 +8,7 @@ All strings are lowercase.
 Try not to use `for` and `while`.
 
 #### Example
-    >>> sentences = ["how are you?", "what is your name?", "you can do this!"
+    >>> sentences = ["how are you?", "what is your name?", "you can do this!"]
     >>> word = "you"
     >>> count_words(sentences=sentences, word=word)
     3
