@@ -24,4 +24,14 @@ def count_words(sentences: List[str], word: str) -> int:
         hash_names(names)
         [-6913778901462750956, 4044914442677255742, -8154646851311137882]
         """
-    return sum(string.count(word) for string in sentences)
+    from functools import reduce
+    if sentences:
+        return reduce(
+            lambda num1, num2: num1 + num2,
+            map(lambda string: string.count(word), sentences)
+        )
+    return 0
+
+
+sentences_test = ['test string', 'with two test words: test and test', 'and some without ** string']
+print(count_words(sentences_test, 'test'))
