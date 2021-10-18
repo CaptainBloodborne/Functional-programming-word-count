@@ -26,7 +26,4 @@ def count_words(sentences: List[str], word: str) -> int:
         """
     from functools import reduce
 
-    return reduce(
-        lambda num1, num2: num1 + num2,
-        map(lambda string: string.count(word), sentences)
-    )
+    return sum(string.count(word) for string in sentences)
